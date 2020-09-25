@@ -1,0 +1,22 @@
+op_weather_agg.admin:
+  title: 'Weather Aggregator'
+  route_name: aggregator.admin_overview
+  parent: system.admin
+  weight: 9999
+
+op_weather_agg.admin_settings:
+  title: 'Weather Aggregator Administration'
+  route_name: aggregator.admin_overview
+  parent: op_weather_agg.admin
+
+op_weather_agg.view_list:
+  title: 'Weather Aggregator List'
+  route_name: view.weather_feed_aggregator.list
+  parent: op_weather_agg.admin
+
+op_weather_agg.help:
+  title: 'Weather Aggregator Help'
+  route_name: help.page
+  route_parameters: { name: 'op_weather_agg' }
+  parent: op_weather_agg.admin
+  weight: 9999

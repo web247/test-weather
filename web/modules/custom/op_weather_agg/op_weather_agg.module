@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains op_weather_agg.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function op_weather_agg_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the email_sign module.
+    case 'help.page.op_weather_agg':
+      $help = ['#theme' => 'help_weather'];
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Weather Feed Aggregator') . '</p>';
+      $output .= render($help);
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function op_weather_agg_theme($existing, $type, $theme, $path) {
+  return [
+    'help_weather' => [],
+  ];
+}

@@ -1,0 +1,5 @@
+op_weather_agg.add_feed_source:
+  route_name: aggregator.feed_add
+  title: 'Add feed Source'
+  appears_on:
+    - 'view.op_weather_feed_aggregator.settings'

@@ -1,0 +1,79 @@
+<h2>{{ 'How to:'|t }}</h2>
+
+{% set list = '<a href="' ~ path('view.weather_feed_aggregator.list') ~ '">page</a>' %}
+{% set help = '<a href="' ~ path('help.page', {'name': 'op_weather_agg'}) ~ '">page</a>' %}
+{% set admin = '<a href="' ~ path('aggregator.admin_overview') ~ '">page</a>' %}
+{% set adminSet = '<a href="' ~ path('aggregator.admin_settings') ~ '">here</a>' %}
+{% set cron = '<a href="' ~ path('system.cron_settings') ~ '">Cron</a>' %}
+{% set ultimateCron = '<a href="' ~ path('entity.ultimate_cron_job.collection') ~ '">Ultimate Cron</a>' %}
+
+<h3>{{ 'Config and Import'|t }}</h3>
+<p>
+  {{ 'Weather Feed Aggregator allow to collect the Weather Feed from different
+  sources and load it into a searchable store. The store can be built in a
+  different ways by using Drupal Views queries to display the collected weather
+  feed data.'|t }}
+</p>
+<p>
+  {{ 'Before Import the Weather Feed from different sources those must be
+  configured, this can be done on this @link.'|t({'@link': admin|t }) }}
+</p>
+<p>
+  {{ 'First of all you need to add a Feed Resource (Server) by hitting
+  "Add feed" button on the top of the page. After adding a title (Used for
+  identifying the Feed Source). fill the Server URL that will grab from the
+  Weather Feed. Select an interval how often the feed should be updated. Hit
+  "Save", this way you can multiple Weather Feed Servers.'|t }}
+</p>
+<p>
+  {{ 'The Feed data is pulled during the Server Cron Jobs, this way the site
+  navigation is not affected as those processes run in the background. You can
+  run it manually or delete it by selecting the "Update/Delete" Items from the
+  Operations column for the corresponding Server, this can be done on the
+  @link.'|t({'@link': admin|t }) }}
+</p>
+<p>
+  {{ 'Some customizations for the Feed Import and how long it live on the site
+  can be configured on the Feed Aggregator Settings
+  @page.'|t({'@page': adminSet|t }) }}
+</p>
+<h3>{{ 'Cron Jobs'|t }}</h3>
+<p>
+  {{ 'The Cron can be Run or configured on the following pages: @cron /
+  @ultimateCron.'|t({'@cron': cron|t, '@ultimateCron': ultimateCron|t }) }}
+</p>
+<h3>{{ 'Feeds and APIs'|t }}</h3>
+<p>
+  {{ 'All Imported Feed can be exposed via API through the links:' }}
+</p>
+<ul>
+  <li>
+    <span>
+      <strong>
+        {{ 'Weather Feed Data grouped by Source (configured here
+        @link).'|t({'@link': admin|t }) }}
+      </strong>
+    </span>
+    <ol>
+      <ul><code>api/v1/weather/source/1?_format=xml</code></ul>
+      <ul><code>api/v1/weather/source/1?_format=json</code></ul>
+    </ol>
+    <span>
+      {{ 'XML & JSON formats currently are allowed.'}}
+    </span>
+  </li>
+  <li>
+    <span>
+      <strong>
+        {{ 'All Weather Feed Data' }}
+      </strong>
+    </span>
+    <ol>
+      <ul><code>api/v1/weather/all?_format=xml</code></ul>
+      <ul><code>api/v1/weather/all?_format=json</code></ul>
+    </ol>
+    <span>
+      {{ 'XML & JSON formats currently are allowed.'}}
+    </span>
+  </li>
+</ul>
