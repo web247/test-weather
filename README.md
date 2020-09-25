@@ -38,5 +38,5 @@ Points covered partially by Drupal CMS.
 - Caching
 
 *NOTE:* An example of CI / CD can be found on the links:
-Gitlab: https://bitbucket.org/optasy/weather-channel/src/master/.gitlab-ci.yml   
-Bitbucket: https://bitbucket.org/optasy/weather-channel/src/master/.ci/
+- Gitlab: https://bitbucket.org/optasy/weather-channel/src/master/.gitlab-ci.yml   
+- Bitbucket: https://bitbucket.org/optasy/weather-channel/src/master/.ci/
