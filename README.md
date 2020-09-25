@@ -37,6 +37,5 @@ Points covered partially by Drupal CMS.
 - Scalability
 - Caching
 
-*NOTE:* An example of CI / CD can be found on the links:
+*NOTE:* An example of CI / CD can be found here:
 - Gitlab: https://github.com/web247/test-weather/blob/master/_ci/.gitlab-ci.yml
-- Bitbucket: https://bitbucket.org/optasy/weather-channel/src/master/.ci/
