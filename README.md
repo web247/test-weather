@@ -1,4 +1,4 @@
-# test-weather
+# Test - Weather Channel
 The main links for the Weather Channel functionality are:
 - Administrative area: https://dev-weather-channel.pantheonsite.io/admin/config/services/aggregator
 - Imported Weather Feed demo: https://dev-weather-channel.pantheonsite.io/weather-feed-aggregator (built as a Views page which can be configured to be rendered as a table, list, grid, etc.)
